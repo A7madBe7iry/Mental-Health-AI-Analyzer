@@ -1,3 +1,5 @@
+import tensorflow as tf
+from tensorflow.python.framework.ops import disable_eager_execution
 import streamlit as st
 import numpy as np
 import pickle
@@ -125,7 +127,13 @@ div.stButton > button:hover { opacity: 0.88; }
 
 @st.cache_resource
 def load_survey_model():
-    model  = load_model("mental_model.h5", compile=False)
+    import tensorflow as tf
+    model = tf.keras.models.load_model(
+         "mental_model.h5", 
+          compile=False,
+          custom_objects={'InputLayer': tf.keras.layers.InputLayer}
+    )
+
     scaler = pickle.load(open("scaler.pkl", "rb"))
     return model, scaler
 
