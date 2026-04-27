@@ -3,6 +3,7 @@ transformers
 torch
 scikit-learn
 numpy
+pandas
 deep-translator
 sentencepiece
 huggingface_hub
