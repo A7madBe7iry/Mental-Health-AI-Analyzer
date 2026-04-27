@@ -1,10 +1,5 @@
 streamlit
-transformers
-tensorflow
-torch
-scikit-learn
 numpy
 pandas
-deep-translator
-sentencepiece
-huggingface_hub
+scikit-learn
+joblib
