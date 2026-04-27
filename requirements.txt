@@ -1,5 +1,6 @@
 streamlit
 transformers
+tensorflow
 torch
 scikit-learn
 numpy
